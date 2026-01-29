@@ -1,8 +1,4 @@
-DESCRIPTION = "Prints Hello World"
-PN = 'hello'
-PV = '1'
-
-python do_hello() {
+python do_print() {
    bb.plain("********************");
    bb.plain("*                  *");
    bb.plain("*  Hello, World!   *");
@@ -10,4 +6,4 @@ python do_hello() {
    bb.plain("********************");
 }
 
-addtask hello before do_build
+addtask print before do_build
