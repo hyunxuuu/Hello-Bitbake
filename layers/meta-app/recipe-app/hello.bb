@@ -1,11 +1,13 @@
-DESCRIPTION = "Prints Hello Bitbake"
+DESCRIPTION = "Prints Hello World"
+PN = 'hello'
+PV = '1'
 
 python do_hello() {
-   bb.plain("*********************");
-   bb.plain("*                   *");
-   bb.plain("*  Hello, Bitbake!  *");
-   bb.plain("*                   *");
-   bb.plain("*********************");
+   bb.plain("********************");
+   bb.plain("*                  *");
+   bb.plain("*  Hello, World!   *");
+   bb.plain("*                  *");
+   bb.plain("********************");
 }
 
-addtask do_hello before do_build
+addtask hello before do_build
